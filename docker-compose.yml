@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  k6:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: k6-reqres
+    volumes:
+      - ./reports:/app/reports
+    environment:
+      - BASE_URL=${BASE_URL}
+      - TEST_TYPE=${TEST_TYPE}
+    command: run tests/${TEST_TYPE}.test.js --console-output=tty

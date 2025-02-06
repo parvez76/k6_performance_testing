@@ -1,0 +1,26 @@
+{
+  "name": "k6-load-test-framework",
+  "version": "1.0.0",
+  "description": "Enterprise-grade load testing solution with k6",
+  "scripts": {
+    "test:smoke": "k6 run tests/smoke.test.js --env TEST_TYPE=smoke",
+    "test:stress": "k6 run tests/stress.test.js --env TEST_TYPE=stress",
+    "test:soak": "k6 run tests/soak.test.js --env TEST_TYPE=soak",
+    "test:spike": "k6 run tests/spike.test.js --env TEST_TYPE=spike",
+    "test:breakpoint": "k6 run tests/breakpoint.test.js --env TEST_TYPE=breakpoint",
+    "test:load": "k6 run tests/load.test.js --env TEST_TYPE=load",
+    "test:ramp": "k6 run tests/ramp.test.js --env TEST_TYPE=ramp",
+    "test:endurance": "k6 run tests/endurance.test.js --env TEST_TYPE=endurance"
+  },
+  "devDependencies": {
+    "k6": "^0.0.0"
+  },
+  "keywords": [
+    "load-testing",
+    "performance",
+    "k6",
+    "qa-automation"
+  ],
+  "author": "github.com/parvez76",
+  "license": "ISC"
+}
